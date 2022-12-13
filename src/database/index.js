@@ -1,4 +1,4 @@
-const Sequelize = require("sequelize");
+const sequelize = require("sequelize");
 
 const DB_NAME = "desafio3";
 const DB_USER = "root";
