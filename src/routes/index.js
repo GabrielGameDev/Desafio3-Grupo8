@@ -1,13 +1,18 @@
-const express = require("express")
+const express = require("express");
+const atendimentosController = require("../controllers/atendimentosController");
 const routes = express.Router()
 
-routes.get("/", (req, res) => {
-    res.send("Hello World");
-    })
+routes.get("/atendimentos", atendimentosController.listarAtendimentos);
+routes.get("/atendimentos/:id", atendimentosController.encontrarAtendimento);
+routes.post("/atendimentos", atendimentosController.cadastrarAtendimentos);
 
-routes.post("/psicologos", (req, res) => {    
-    res.json(req.body);
-})
+
+
+routes.get("/atendimentos/:id", (req, res) => {
+    console.log(req.params);
+    res.send("Mostrando atendimento desejado!");
+});
+
 
 
 module.exports = routes
