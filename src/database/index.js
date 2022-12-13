@@ -1,15 +1,15 @@
-const sequelize = require("sequelize")
+const Sequelize = require("sequelize");
 
-const DB_NAME = "desafio3"
-const DB_USER = "root"
-const DB_PASSWORD = "root"
+const DB_NAME = "desafio3";
+const DB_USER = "root";
+const DB_PASS = "Mysql";
 const DB_CONFIG = {
     dialect: "mysql",
     host: "localhost",
     port: 3306
 }
 
-const db = new sequelize(DB_NAME, DB_USER, DB_PASSWORD, DB_CONFIG)
+const db = new sequelize(DB_NAME, DB_USER, DB_PASS, DB_CONFIG)
 
 async function hasConnection() {
     try {
