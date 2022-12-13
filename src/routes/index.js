@@ -1,13 +1,20 @@
 const express = require("express")
+const psicologos = require("../controllers/psicologos")
 const routes = express.Router()
 
-routes.get("/", (req, res) => {
-    res.send("Hello World");
-    })
+//criar um psicologo
+routes.post("/psicologos", psicologos.criarPsicologo)
 
-routes.post("/psicologos", (req, res) => {    
-    res.json(req.body);
-})
+//listar psicologos
+routes.get("/psicologos", psicologos.listarPsicologos)
 
+//listar um psicologo
+routes.get("/psicologos/:id", psicologos.listarPsicologo)
+
+//delete psicologo
+routes.delete("/psicologos/:id", psicologos.deletarPsicologo)
+
+//update psicologo
+routes.put("/psicologos/:id", psicologos.atualizarPsicologo)
 
 module.exports = routes
