@@ -12,7 +12,7 @@ const atendimentosController = {
 
         const encontrarAtendimento = await Atendimentos.findByPk(req.params.id);
 
-        if(encontrarAtendimento == null){
+        if (encontrarAtendimento == null) {
             return res.status(404).json("Id não encontrado");
         };
 
