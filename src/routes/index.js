@@ -2,10 +2,12 @@ const express = require("express")
 const psicologosController = require("../controllers/psicologosController")
 const atendimentosController = require("../controllers/atendimentosController");
 const pacientesController = require("../controllers/pacientesController");
+const psicologoCreateValidation = require("../validations/psicologos/create")
 const routes = express.Router()
 
+
 //criar um psicologo
-routes.post("/psicologos", psicologosController.criarPsicologo);
+routes.post("/psicologos", psicologoCreateValidation, psicologosController.criarPsicologo);
 //listar psicologos
 routes.get("/psicologos", psicologosController.listarPsicologos);
 //listar um psicologo

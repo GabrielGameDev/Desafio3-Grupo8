@@ -23,8 +23,7 @@ const Psicologos = db.define("Psicologos", {
     apresentacao: {
         type: DataTypes.STRING,
     },
-    //Não crie os campos createdAt e updatedAt
-
+    
     
 },
 {

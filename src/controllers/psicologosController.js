@@ -1,4 +1,5 @@
 const Psicologo = require('../models/Psicologos');
+const bcrypt = require('bcryptjs');
 
 const psicologosController = {
     //listar psicologos, listar um psicologo, atualizar um psicologo, deletar um psicologo e criar um psicologo
@@ -41,8 +42,10 @@ const psicologosController = {
 
     async criarPsicologo(req, res) {
         const { nome, email, senha, apresentacao } = req.body;
-        const novoPsicologo = await Psicologo.create({ nome, email, senha, apresentacao });
-        res.json(novoPsicologo);
+        const newSenha = bcrypt.hashSync(senha, 10);
+        const novoPsicologo = await Psicologo.create({ nome, email, senha:newSenha, apresentacao });
+
+        res.status(201).json(novoPsicologo);
     }
 
 }
