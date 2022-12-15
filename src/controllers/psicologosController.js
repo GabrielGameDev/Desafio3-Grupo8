@@ -41,7 +41,15 @@ const psicologosController = {
     },
 
     async criarPsicologo(req, res) {
+
         const { nome, email, senha, apresentacao } = req.body;
+
+        const emailExiste = await Psicologo.findOne({ where: { email } });
+
+        if (emailExiste) {
+            return res.status(400).json("Email já cadastrado");
+        }
+
         const newSenha = bcrypt.hashSync(senha, 10);
         const novoPsicologo = await Psicologo.create({ nome, email, senha:newSenha, apresentacao });
 
