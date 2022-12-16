@@ -16,7 +16,7 @@ const pacientesController = {
     atualizarPaciente: async (req, res) => {
         const { id } = req.params;
 
-        const paciente = await Pacientes.findByPk(id);
+        let paciente = await Pacientes.findByPk(id);
 
         if (paciente == null) {
             return res.status(404).json("Id não encontrado");
@@ -29,8 +29,8 @@ const pacientesController = {
                 id
             }
         });
-
-        res.json("Paciente atualizado com sucesso!");
+        paciente = await Pacientes.findByPk(id)
+        res.json(paciente);
     },
     deletarPaciente: async (req, res) => {
         const { id } = req.params; 
@@ -53,6 +53,13 @@ const pacientesController = {
 
     async criarPaciente(req, res) {
         const { nome, email, idade } = req.body;
+
+        const pacienteExiste = await Pacientes.findOne({ where: { email } });
+
+        if (pacienteExiste) {
+            return res.status(400).json("Email já cadastrado");
+        }
+
         const novoPaciente = await Pacientes.create({ nome, email, idade });
         return res.status(201).json(novoPaciente);
     },

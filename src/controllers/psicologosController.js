@@ -19,7 +19,7 @@ const psicologosController = {
     atualizarPsicologo: async (req, res) => {
         const { id } = req.params;     
         
-        const psicologo = await Psicologo.findByPk(id);
+        let psicologo = await Psicologo.findByPk(id);
         if (psicologo == null) {
             return res.status(404).json("Id não encontrado");
         };
@@ -32,7 +32,7 @@ const psicologosController = {
             }
         })
 
-
+        psicologo = await Psicologo.findByPk(id);    
         res.json(psicologo);
     },
     deletarPsicologo: async (req, res) => {
