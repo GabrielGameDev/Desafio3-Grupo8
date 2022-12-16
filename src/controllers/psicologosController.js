@@ -17,24 +17,35 @@ const psicologosController = {
 
     },
     atualizarPsicologo: async (req, res) => {
-        const { id } = req.params;
+        const { id } = req.params;        
+
         const { nome, email, senha, apresentacao } = req.body;
         const newSenha = bcrypt.hashSync(senha, 10);
         const psicologoAtualizado = await Psicologo.update({ nome, email, senha: newSenha, apresentacao }, {
             where: {
                 id
             }
-        });
+        })
 
-        res.json("Psicologo atualizado com sucesso!");
+        const psicologo = await Psicologo.findByPk(id);
+
+        res.json(psicologo);
     },
     deletarPsicologo: async (req, res) => {
         const { id } = req.params;
+
+        const psicologo = await Psicologo.findByPk(id);
+
+        if (psicologo == null) {
+            return res.status(404).json("Id não encontrado");
+        };
+
         await Psicologo.destroy({
             where: {
                 id
             }
-        });
+        });       
+        
 
         return res.status(204).json();
 

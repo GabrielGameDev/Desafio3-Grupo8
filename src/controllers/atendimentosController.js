@@ -1,4 +1,5 @@
 const Atendimentos = require("../models/Atendimentos");
+const Pacientes = require('../models/Pacientes');
 
 const atendimentosController = {
     listarAtendimentos: async (req, res) => {
@@ -22,7 +23,15 @@ const atendimentosController = {
     async cadastrarAtendimentos(req, res) {
         console.log(req.auth.id)
         
+        console.log(req.body.pacientes_id)
+
         const psicologoId = req.auth.id;
+
+        const pacienteExiste = await Pacientes.findByPk(req.body.pacientes_id);
+
+        if (pacienteExiste == null) {
+            return res.status(404).json("Id do paciente não encontrado");
+        };
 
         const { pacientes_id, data_atendimento, observacao} = req.body;
 
