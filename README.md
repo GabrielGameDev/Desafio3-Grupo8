@@ -35,7 +35,7 @@
 
 **Gabriel Barbosa**
 
-Linkedin: 
+Linkedin: https://www.linkedin.com/in/gabriel-barbosa-774497a4/
 
 Github: https://github.com/GabrielGameDev
 
