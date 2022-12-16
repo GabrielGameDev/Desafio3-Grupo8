@@ -19,7 +19,8 @@ const psicologosController = {
     atualizarPsicologo: async (req, res) => {
         const { id } = req.params;
         const { nome, email, senha, apresentacao } = req.body;
-        const psicologoAtualizado = await Psicologo.update({ nome, email, senha, apresentacao }, {
+        const newSenha = bcrypt.hashSync(senha, 10);
+        const psicologoAtualizado = await Psicologo.update({ nome, email, senha: newSenha, apresentacao }, {
             where: {
                 id
             }
