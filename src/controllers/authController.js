@@ -23,7 +23,7 @@ const AuthController = {
                 nome: psicologo.nome,
             },
             secret.key);
-        res.json(token);
+        return res.json(token);
     }
 }
 

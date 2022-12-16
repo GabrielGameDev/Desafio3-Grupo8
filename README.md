@@ -1,8 +1,44 @@
-# Desafio3-Grupo8
-Projeto de Backend do Desafio 3 da Gama Experience 46. Grupo 8
+<h1 align="center">Desafio 3 XP46 - Grupo 8</h1>
 
-Clonar projeto
+<br>
 
-Abrir no VSCode
+<h3 align="center">Terceiro desafio do Gama Experience Edição 46.</h3>
 
-Rodar o comando npm install
+<br>
+
+<p align="center">Que tem o intuito colocar em prática nossos conhecimentos de Back-end, criando uma API do zero utilizando Node.js, Express e Banco de dados MySQL</p>
+
+<br>
+
+<h2 align="center">:rocket: Demonstração</h2>
+<div align="center"> 
+  <a href="https://leonardofilipe-dev.github.io/desafio-2/">Clique aqui para ver o projeto em execução</a>
+</div>
+
+<br>
+
+<h2 align="center">:computer: Tecnologias</h2>
+<div align="center">
+
+  ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) 
+  ![ExpressJS](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+  ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+</div>
+<br>
+<h2 align="center">:construction_worker: Colaboradores</h2>
+
+
+**Gabriel Barbosa**
+
+Linkedin: 
+
+Github: https://github.com/GabrielGameDev
+
+
+<br>
+
+**Silvio Arem**
+
+Linkedin: https://www.linkedin.com/in/silvio-arem/
+
+Github: https://github.com/Silvio-Arem
