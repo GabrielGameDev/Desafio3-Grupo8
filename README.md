@@ -21,10 +21,6 @@
 
 <p align="center"><a href="https://github.com/GabrielGameDev/Desafio3-Grupo8/tree/main/src/database/script">Script do Banco de Dados</a></p>
 <br>
-<p align="center"><b>Documentação<b></p>
-
-<p align="center"><a href="https://github.com/GabrielGameDev/Desafio3-Grupo8/blob/main/docs/index.html">Link da collection</a></p>
-<br>
 
 <h2 align="center">:computer: Tecnologias</h2>
 <div align="center">
