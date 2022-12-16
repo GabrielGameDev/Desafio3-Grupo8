@@ -33,14 +33,14 @@ const pacientesController = {
             }
         });
 
-        res.json(`Paciente id ${id} deletado com sucesso!`);
+        return res.status(204).json();
 
     },
 
     async criarPaciente(req, res) {
         const { nome, email, idade } = req.body;
         const novoPaciente = await Pacientes.create({ nome, email, idade });
-        res.json(novoPaciente);
+        return res.status(201).json(novoPaciente);
     },
 
 }

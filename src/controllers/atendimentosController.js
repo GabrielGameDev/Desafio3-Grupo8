@@ -33,7 +33,7 @@ const atendimentosController = {
             psicologos_id: psicologoId,
         });
 
-        res.json(novoAtendimento);
+        return res.status(201).json(novoAtendimento);
     },
 };
 

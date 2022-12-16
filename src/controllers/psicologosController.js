@@ -9,7 +9,7 @@ const psicologosController = {
     },
     listarPsicologo: async (req, res) => {
         const { id } = req.params;
-        const psicologo = await Psicologo.findByPk(id);
+        const psicologo = await Psicologo.findByPk(id, { attributes: { exclude: ['senha'] } });
         if (psicologo == null) {
             return res.status(404).json("Id não encontrado");
         };
@@ -29,14 +29,15 @@ const psicologosController = {
     },
     deletarPsicologo: async (req, res) => {
         const { id } = req.params;
-
         await Psicologo.destroy({
             where: {
                 id
             }
         });
 
-        res.json(`Psicologo id ${id} deletado com sucesso!`);
+        return res.status(204).json();
+
+
 
     },
 
@@ -51,7 +52,7 @@ const psicologosController = {
         }
 
         const newSenha = bcrypt.hashSync(senha, 10);
-        const novoPsicologo = await Psicologo.create({ nome, email, senha:newSenha, apresentacao });
+        const novoPsicologo = await Psicologo.create({ nome, email, senha: newSenha, apresentacao });
 
         res.status(201).json(novoPsicologo);
     }
