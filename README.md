@@ -14,16 +14,16 @@
 
 <p align="center"><b>DER<b></p>
 <div align="center">
-  <img width="500" src="https://github.com/GabrielGameDev/Desafio3-Grupo8/blob/main/imagens/DER.jpg" alt="Imagem do DER">
+  <img width="500" src="https://github.com/GabrielGameDev/Desafio3-Grupo8/tree/main/src/database/DER.jpg" alt="Imagem do DER">
 </div>
 <br>
 <p align="center"><b>Script<b></p>
 
-<p align="center"><a href="https://github.com/GabrielGameDev/Desafio3-Grupo8/blob/main/script-DB/script">Script do Banco de Dados</a></p>
+<p align="center"><a href="https://github.com/GabrielGameDev/Desafio3-Grupo8/tree/main/src/database/script">Script do Banco de Dados</a></p>
 <br>
 <p align="center"><b>Documentação<b></p>
 
-<p align="center"><a href="">Link da collection</a></p>
+<p align="center"><a href="https://github.com/GabrielGameDev/Desafio3-Grupo8/blob/main/docs/index.html">Link da collection</a></p>
 <br>
 
 <h2 align="center">:computer: Tecnologias</h2>
