@@ -11,10 +11,19 @@
 <br>
 
 <h2 align="center">:rocket: Demonstração</h2>
-<div align="center"> 
-  <a href="https://leonardofilipe-dev.github.io/desafio-2/">Clique aqui para ver o projeto em execução</a>
-</div>
 
+<p align="center"><b>DER<b></p>
+<div align="center">
+  <img width="500" src="https://github.com/GabrielGameDev/Desafio3-Grupo8/blob/main/imagens/DER.jpg">
+</div>
+<br>
+<p align="center"><b>Script<b></p>
+
+<p align="center"><a href="https://github.com/GabrielGameDev/Desafio3-Grupo8/blob/main/script-DB/script">Script do Banco de Dados</a></p>
+<br>
+<p align="center"><b>Documentação<b></p>
+
+<p align="center"><a href="">Link da collection</a></p>
 <br>
 
 <h2 align="center">:computer: Tecnologias</h2>
