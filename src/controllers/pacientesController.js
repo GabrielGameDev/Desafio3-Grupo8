@@ -29,7 +29,9 @@ const pacientesController = {
                 id
             }
         });
+
         paciente = await Pacientes.findByPk(id)
+
         res.json(paciente);
     },
     deletarPaciente: async (req, res) => {
