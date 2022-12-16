@@ -15,6 +15,14 @@ const pacientesController = {
     },
     atualizarPaciente: async (req, res) => {
         const { id } = req.params;
+
+        const paciente = await Pacientes.findByPk(id);
+
+        if (paciente == null) {
+            return res.status(404).json("Id não encontrado");
+        };
+
+
         const { nome, email, idade } = req.body;
         const pacienteAtualizado = await Pacientes.update({ nome, email, idade }, {
             where: {
@@ -22,14 +30,14 @@ const pacientesController = {
             }
         });
 
-        res.json(req.body);
+        res.json("Paciente atualizado com sucesso!");
     },
     deletarPaciente: async (req, res) => {
         const { id } = req.params; 
 
-        const pacienteExiste = await Pacientes.findByPk(id);
+        const paciente = await Pacientes.findByPk(id);
 
-        if (pacienteExiste == null) {
+        if (paciente == null) {
             return res.status(404).json("Id não encontrado");
         };
 
@@ -45,13 +53,6 @@ const pacientesController = {
 
     async criarPaciente(req, res) {
         const { nome, email, idade } = req.body;
-
-        const pacienteExiste = await Pacientes.findOne({ where: { email } });
-
-        if (pacienteExiste) {
-            return res.status(400).json("Email já cadastrado");
-        }
-
         const novoPaciente = await Pacientes.create({ nome, email, idade });
         return res.status(201).json(novoPaciente);
     },
