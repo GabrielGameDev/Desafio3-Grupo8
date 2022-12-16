@@ -14,7 +14,7 @@
 
 <p align="center"><b>DER<b></p>
 <div align="center">
-  <img width="500" src="https://github.com/GabrielGameDev/Desafio3-Grupo8/tree/main/src/database/DER.jpg" alt="Imagem do DER">
+  <img width="500" src="https://raw.githubusercontent.com/GabrielGameDev/Desafio3-Grupo8/main/src/database/DER.png" alt="Imagem do DER">
 </div>
 <br>
 <p align="center"><b>Script<b></p>
